@@ -1,12 +1,35 @@
+Dropbox Command Line Interface, Version 1.1.7
+=============================================
 MODIFIED BY Ian Stokes-Rees, March 2011
 
+Installation
+------------
+
+    $ cd /path/to/install/dir
+    $ git clone https://ijstokes@github.com/ijstokes/dropboxcli.git
+    $ export PATH=`pwd`/dropboxcli/bin
+
+You can then use the "-d" command line option to specify the directory which
+dropbox_cli commands work on, or you can set DROPBOX_HOME.
+
+NOTE: This is a little misleading, because the Dropbox directory will actually
+be: $DROPBOX_HOME/Dropbox
+
+After a Dropbox directory has been created, stop the daemon and then use the
+tool "dropbox_dir" to move/rename the "Dropbox" directory to something else.
+
 Questions to: https://github.com/ijstokes/dropboxcli/issues
+
+Additional Information
+----------------------
 
 I've put together a CLI tarball for Dropbox with three main goals:
 
 1. Putting the Dropbox folder somewhere *other* than $HOME/Dropbox; and
-2. Making it easy to start up (and manage) multiple Dropbox instances
-for the same user in different locations;
+
+2. Making it easy to start up (and manage) multiple Dropbox instances for the
+same user in different locations (possibly with multiple Dropbox accounts);
+
 3. Making it possible to have a per-host (or per-site) single
 distribution of the Dropbox CLI tools, rather than per-user.
 
@@ -24,7 +47,8 @@ Feedback appreciated, esp. on how to handle the Python 2.6 issue (I
 could rip out 2.6 dependencies, or simply do /bin/env python and state
 that python2.6 must be the default).
 
-ORIGINAL README FOLLOWS:
+Original Readme
+---------------
 
 Thanks for downloading Dropbox! This is version 1.1.6 of the raw binary
 distribution of our syncing daemon. Normal users should not install this
@@ -72,6 +96,8 @@ Check us out on the web at http://www.dropbox.com/
 
 -- The Dropbox Team
 
+Licenses and Acknowledgments
+----------------------------
 
 Regarding our inclusion of FreeType:
         Portions of this software are copyright (C) 2008 The FreeType

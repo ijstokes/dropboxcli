@@ -41,15 +41,14 @@ from select import select
 from contextlib import closing
 from posixpath import curdir, sep, pardir, join, abspath, commonprefix
 
-INFO = u"Dropbox is the easiest way to share and store your files online. Want to learn more? Head to"
-LINK = u"http://www.dropbox.com/"
-WARNING = u"In order to use Dropbox, you must download the proprietary daemon."
+INFO        = u"Dropbox is the easiest way to share and store your files online. Want to learn more? Head to"
+LINK        = u"http://www.dropbox.com/"
+WARNING     = u"In order to use Dropbox, you must download the proprietary daemon."
 
 DOWNLOADING = u"Downloading Dropbox... %d%%"
-UNPACKING = u"Unpacking Dropbox... %d%%"
+UNPACKING   = u"Unpacking Dropbox... %d%%"
 
 DROPBOXD_PATH = os.path.dirname(sys.argv[0]) + "/dropboxd"
-#"/storage/app/site/dropbox/bin/dropboxd"
 
 enc = locale.getpreferredencoding()
 
@@ -649,8 +648,6 @@ def start_dropbox():
             proc.kill()
 
     del proc_dict['link']
-    return made_conn
-
     return made_conn
 
 proc_dict = {}
@@ -1318,9 +1315,9 @@ def main(argv):
 
     globaloptionparser = optparse.OptionParser()
     globaloptionparser.add_option("-d", "--dir", dest="home", default=DROPBOX_HOME,
-                  help="set parent directory for Dropbox sync and config directories", metavar="DROPBOX_HOME")
+        help="set parent directory for Dropbox sync and config directories", metavar="DROPBOX_HOME")
     globaloptionparser.add_option("-v", "--verbose", dest="verbose", default=False, action="store_true",
-                  help="turns on verbose messages", metavar="VERBOSITY")
+        help="turns on verbose messages", metavar="VERBOSITY")
     (opts, args) = globaloptionparser.parse_args(argv[0:i])
 
     os.environ['REAL_HOME']     = os.environ['HOME']
